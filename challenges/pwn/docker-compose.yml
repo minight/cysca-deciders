@@ -1,0 +1,85 @@
+version: '2'
+
+services:
+  babyheap:
+    build: ./babyheap
+    restart: always
+    ports:
+      - "8011:9091"
+    environment:
+      - chal=pwn1
+    networks:
+        default:
+        internal:
+  babyecho:
+    build: ./babyecho
+    restart: always
+    ports:
+      - "8012:9091"
+    environment:
+      - chal=pwn2
+    networks:
+        default:
+        internal:
+  babyheap2:
+    build: ./babyheap2
+    restart: always
+    ports:
+      - "8013:9091"
+    environment:
+      - chal=pwn3
+    networks:
+        default:
+        internal:
+  badcharsrop:
+    build: ./badcharsrop
+    restart: always
+    ports:
+      - "8014:9091"
+    environment:
+      - chal=pwn4
+    networks:
+        default:
+        internal:
+  hungman:
+    build: ./hungman
+    restart: always
+    ports:
+      - "8015:8000"
+    environment:
+      - chal=pwn5
+    networks:
+        default:
+        internal:
+  ropasaurusrex:
+    build: ./ropasaurusrex
+    restart: always
+    ports:
+      - "8016:31337"
+    environment:
+      - chal=pwn6
+    networks:
+        default:
+        internal:
+  instprof:
+    build: ./pwn7-gctf2017-instprof
+    restart: always
+    ports:
+      - "8017:31337"
+    networks:
+        default:
+        internal:
+
+  babystack:
+    build: ./pwn8-0ctf-babystack
+    restart: always
+    ports:
+      - "8018:31337"
+    networks:
+        default:
+        internal:
+
+networks:
+    default:
+    internal:
+        internal: true

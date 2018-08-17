@@ -1,0 +1,4 @@
+title: not-a-shell-escape
+category: misc
+port: 8001
+flag: FLAG{x6qHRp8qoBS_AmZvQQvsU_2sAZ3OH2ehdL0jkNeusNjHO8JDXsHPXSbwGsven6BmBwUoANWiir0}

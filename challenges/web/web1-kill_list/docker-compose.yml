@@ -1,0 +1,7 @@
+version: '3.1'
+services:
+  tsai:
+    build: .
+    restart: always
+    ports:
+      - "8041:80"

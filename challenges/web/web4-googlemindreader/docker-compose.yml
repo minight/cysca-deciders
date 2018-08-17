@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  googlectflol:
+    build: .
+    restart: always
+    environment:
+      - FLAG="flag{stolenfromgooglectf2017}"
+    ports:
+      - "8044:80"

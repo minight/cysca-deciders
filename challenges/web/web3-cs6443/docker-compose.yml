@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:10-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: hunter2isbestpassword
+      POSTGRES_USER: adminisbestusername
+      POSTGRES_DB: magicdatabase
+  ssrf:
+    build: ./ssrf
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8043:80"
+  sqli:
+    build: ./sqli
+    restart: always
+    depends_on:
+      - db

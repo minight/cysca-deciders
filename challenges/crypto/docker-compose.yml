@@ -1,0 +1,36 @@
+version: '2'
+
+services:
+  cpushop-crypto1:
+    build: ./cpushop
+    restart: always
+    ports:
+      - "8021:9091"
+    networks:
+        default:
+        internal:
+  yawnguard-crypto2:
+    build: ./yawnguard
+    restart: always
+    ports:
+      - "8022:8000"
+    environment:
+      - chal=pwn6
+    networks:
+        default:
+        internal:
+
+  crypto6-plaidctf:
+    build: ./crypto6-plaidctf-macsh
+    restart: always
+    ports:
+      - "8023:8000"
+    environment:
+      - chal=pwn6
+    networks:
+        default:
+        internal:
+networks:
+    default:
+    internal:
+        internal: true

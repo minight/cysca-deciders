@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Profile:</h1>
+<p>Username: {{user.username}}</p>
+<p>Profile Picture: </p>
+<img src="data:image/jpeg;base64,{{user.profile_picture_data.decode('utf-8')}}" class="img-thumbnail">
+
+<form method="post" action="">
+  <div class="form-group" class="mt-5">
+    <label>Upload new profile picture</label>
+    <input class="form-control" name="profile_picture_url" type="text" placeholder="https://i.redd.it/325smhk7fyxz.jpg" /></input>
+    <input class="btn btn-success mt-3" type="submit" value="Submit" />
+    <!-- we forward your headers too so they don't know we're stealing their content -->
+  </div>
+</form>
+<form>
+{% endblock %}

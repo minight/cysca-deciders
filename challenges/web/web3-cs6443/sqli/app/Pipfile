@@ -1,0 +1,29 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+
+[packages]
+
+click = "==6.7"
+flask = "*"
+itsdangerous = "==0.24"
+"jinja2" = "==2.9.6"
+markupsafe = "==1.0"
+pyparsing = "==2.2.0"
+werkzeug = "==0.12.1"
+psutil = "==5.4.3"
+flask-sqlalchemy = "*"
+selenium = "*"
+flask-wtf = "*"
+
+
+[requires]
+
+python_version = "3.6"

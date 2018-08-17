@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  command:
+    build: ./command
+    restart: always
+    ports:
+      - "8001:9999"
+    networks:
+        default:
+        internal:
+
+networks:
+    default:
+    internal:
+        internal: true

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% if msg %}
+messages:
+{{ "\n".join(msg) }}
+{% endif %}
+data: {{ data }}
+<!-- Only showing the first result regardless of your query -->
+{% endblock content %}
+

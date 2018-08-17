@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>SQLInjector</h2>
+
+<!-- like any proper proxy we forward user headers across for authentication -->
+<form method="post" action="">
+  <input class="form-control mt-5" name="q" type="text" placeholder="http://google.com" /></input>
+  <input class="btn btn-success mt-3" type="submit" value="Submit" />
+</form>
+
+</br>
+{% if data %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<h2>Response: </h2>
+{% autoescape off %}
+{{data}}
+{% endautoescape %}
+<script>hljs.initHighlightingOnLoad();</script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Definitely a OOB SQLi Injection website</h1>
+<p>This is definitely a OOB SQLi Injection site. Try your SQLi Payloads __EVERYWHERE__</p>
+<p>Especially in these forms</p>
+
+<form method="POST" action="">
+  <input class="form-control" name="sqli1" type="text" placeholder="'; Drop tables *;'"/></input>
+  <input class="form-control" name="sqli2" type="text" placeholder="'; Drop tables *;'"/></input>
+  <input class="form-control" name="sqli3" type="text" placeholder="'; Drop tables *;'"/></input>
+  <input class="form-control" name="sqli4" type="text" placeholder="'; Drop tables *;'"/></input>
+  <input class="form-control" name="sqli5" type="text" placeholder="'; Drop tables *;'"/></input>
+  <input class="form-control" name="sqli6" type="text" placeholder="'; Drop tables *;'"/></input>
+  <input class="btn btn-success mt-3" type="submit" value="Submit" />
+</form>
+
+<p>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' LIMIT 0,1' at line 1</p>
+<small>see it worked! now stop getting baited and go find the actual vuln<small>
+
+{% endblock %}
