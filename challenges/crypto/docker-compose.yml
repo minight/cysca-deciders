@@ -24,7 +24,7 @@ services:
     build: ./crypto6-plaidctf-macsh
     restart: always
     ports:
-      - "8023:8000"
+      - "8023:9091"
     environment:
       - chal=pwn6
     networks:

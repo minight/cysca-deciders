@@ -65,7 +65,7 @@ services:
     build: ./pwn7-gctf2017-instprof
     restart: always
     ports:
-      - "8017:31337"
+      - "8017:9091"
     networks:
         default:
         internal:
@@ -74,7 +74,7 @@ services:
     build: ./pwn8-0ctf-babystack
     restart: always
     ports:
-      - "8018:31337"
+      - "8018:9091"
     networks:
         default:
         internal:

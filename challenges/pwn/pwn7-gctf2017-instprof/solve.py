@@ -5,7 +5,7 @@ from pwn import *
 # FILL binary and host, port
 binary = './inst_prof'
 host, port = 'inst-prof.ctfcompetition.com:1337'.split(':')
-host, port ='172.16.63.1:9091'.split(':')
+host, port ='notmonitoringyourinternettraffic.ns.agency:8017'.split(':')
 port = int(port)
 
 e = ELF(binary)
